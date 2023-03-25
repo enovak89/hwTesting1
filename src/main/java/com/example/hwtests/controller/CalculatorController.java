@@ -1,6 +1,6 @@
 package com.example.hwtests.controller;
 
-import com.example.hwtests.exceptions.IllegalNum2Exception;
+import com.example.hwtests.exceptions.IllegalArgument2Exception;
 import com.example.hwtests.exceptions.NoArgumentException;
 import com.example.hwtests.service.CalculatorService;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ public class CalculatorController {
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler({NoArgumentException.class, IllegalNum2Exception.class})
+    @ExceptionHandler({NoArgumentException.class, IllegalArgument2Exception.class})
     public String handlerExceptions(RuntimeException e) {
         return "http status: " + HttpStatus.BAD_REQUEST.toString() + " " + e.getMessage();
     }

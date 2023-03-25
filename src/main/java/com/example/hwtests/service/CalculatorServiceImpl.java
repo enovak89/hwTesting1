@@ -1,6 +1,6 @@
 package com.example.hwtests.service;
 
-import com.example.hwtests.exceptions.IllegalNum2Exception;
+import com.example.hwtests.exceptions.IllegalArgument2Exception;
 import com.example.hwtests.exceptions.NoArgumentException;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +35,7 @@ public class CalculatorServiceImpl implements CalculatorService {
             throw new NoArgumentException("Укажите оба числа");
         }
         if (num2 == 0) {
-            throw new IllegalNum2Exception("Делить на ноль нельзя");
+            throw new IllegalArgument2Exception("Делить на ноль нельзя");
         }
         Integer result = num1 / num2;
         return num1 + " / " + num2 + " = " + result;
