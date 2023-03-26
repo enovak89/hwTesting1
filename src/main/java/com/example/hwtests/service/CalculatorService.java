@@ -1,5 +1,7 @@
 package com.example.hwtests.service;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 public interface CalculatorService {
     String plus(Integer num1, Integer num2);
 
